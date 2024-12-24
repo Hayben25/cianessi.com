@@ -1,0 +1,46 @@
+{{define "navbar"}}
+<head>
+    <script src="htmx.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <nav hx-boost="true" id="navbar">
+        <div
+            class="h-20 grid grid-cols-8 gap-4 bg-gradient-to-r from-orange-600 to-indigo-950"
+        >
+            <div class="place-self-center hover:text-white">
+                <button
+                    hx-get="/"
+                    hx-push-url="true"
+                    hx-target="body"
+                    type="button"
+                    class="text-3xl"
+                >
+                    Home
+                </button>
+            </div>
+            <div class="place-self-center hover:text-white">
+                <button
+                    hx-get="/nas-landing"
+                    hx-push-url="true"
+                    hx-target="body"
+                    type="button"
+                    class="text-3xl"
+                >
+                    Nas Home
+                </button>
+            </div>
+            <div class="place-self-center text-3xl hover:text-white">
+                <button>Tutoring</button>
+            </div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div class="place-self-center text-3xl text-white hover:text-black">
+                <button>Sign-in</button>
+            </div>
+        </div>
+    </nav>
+</body>
+{{end}}
